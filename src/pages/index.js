@@ -96,7 +96,7 @@ const Index = () => (
         <div className="container mx-auto text-center">
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12 items-center">
           <div className="flex-1 px-3 my-5">
-            <Card className="bg-white bg-opacity-75 ">
+            <Card className="bg-white bg-opacity-75 mt-5 mb-5">
               <p className="lg:text-xl">
                 Fúerza CF is an elite soccer team in the Des Moines area for ‘09
                 girls seeking to excel by training in a more intense and dynamic
@@ -107,7 +107,7 @@ const Index = () => (
           <div className="flex-1 px-3">
           </div>
           <div className="flex-1 px-3 my-5">
-            <Card className="bg-white bg-opacity-75">
+            <Card className="bg-white bg-opacity-75 mt-5 mb-5">
               <p className="lg:text-xl">
                 It is a team oriented philosophy with a goal to compete against
                 top teams and divisions around the Midwest as well as national
