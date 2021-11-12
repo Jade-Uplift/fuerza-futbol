@@ -29,7 +29,7 @@ const Index = () => (
         </div>
       </div>
     </section>
-    <section id="about" className="py-5 lg:pb-10 lg:pt-10 bg-primary bg-opacity-25">
+    <section id="about" className="py-5 pt-32 pb-32 bg-primary bg-opacity-25">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">About Us</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
@@ -106,24 +106,24 @@ const Index = () => (
     <section id="competition" className="py-20 lg:pt-32">
       <div className="container mx-auto text-center">
         <LabelText className="text-gray-600">Competition</LabelText>
-        <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
-          <div className="w-full sm:w-1/4">
+        <div className="flex flex-col items-center lg:flex-row mt-8 lg:px-24 lg:items-start">
+          <div className="w-full sm:w-1/4 mx-5">
             <CompetitionBox primaryText="ECNL" secondaryText="Elite Clubs National League" />
           </div>
-          <div className="w-full sm:w-1/4">
+          <div className="w-full sm:w-1/4 mx-5">
             <CompetitionBox primaryText="SCNL" secondaryText="Select Clubs National Showcase League" />
           </div>
-          <div className="w-full sm:w-1/4">
+          <div className="w-full sm:w-1/4 mx-5">
             <CompetitionBox primaryText="Friendly" secondaryText="Tournaments" />
           </div>
-          <div className="w-full sm:w-1/4">
+          <div className="w-full sm:w-1/4 mx-5">
             <CompetitionBox primaryText="Winter" secondaryText="The team plays all year in competitive tournaments that are full field (11v11)" />
           </div>
         </div>
       </div>
     </section>
     <section id="tryouts" className="py-5 lg:py-10">
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-32 pb-32">
         <div className="flex flex-col md:flex-row md:-mx-3">
           <Card className="mb-8 bg-primary">
             <LabelText className="mb-8 text-white text-center text-3xl">Tryouts</LabelText>
