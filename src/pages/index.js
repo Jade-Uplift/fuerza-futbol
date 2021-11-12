@@ -29,7 +29,7 @@ const Index = () => (
         </div>
       </div>
     </section>
-    <section id="about" className="py-32 bg-primary bg-opacity-25">
+    <section id="about" className="py-40 bg-primary bg-opacity-25">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">About Us</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12 items-center">
@@ -122,7 +122,7 @@ const Index = () => (
         </div>
       </div>
     </section>
-    <section id="tryouts" className="py-32">
+    <section id="tryouts" className="py-40">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row md:-mx-3">
           <Card className="mb-8 bg-primary">
