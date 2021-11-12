@@ -11,5 +11,11 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: []
+  plugins: [],
+  purge: [
+    "./src/components/*.js",
+    "./src/components/**/*.js",
+    "./src/data/*.js",
+    "./src/pages/*.js"
+  ]
 };
