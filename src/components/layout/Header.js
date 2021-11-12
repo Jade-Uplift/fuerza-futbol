@@ -21,7 +21,7 @@ const Header = () => (
           Competition
         </AnchorLink>
         <AnchorLink className="px-4" href="#about">
-          Who We Are
+          About
         </AnchorLink>
         <AnchorLink className="px-4" href="#tryouts">
           Tryouts
