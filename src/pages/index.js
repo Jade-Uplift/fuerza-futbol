@@ -32,10 +32,10 @@ const Index = () => (
     <section id="about" className="py-32 bg-primary bg-opacity-25">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">About Us</h2>
-        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12 items-center">
           <div className="flex-1 px-3">
             <Card className="bg-white">
-              <p className="text-xl">
+              <p className="lg:text-xl">
                 Fúerza CF is an elite soccer team in the Des Moines area for ‘09
                 girls seeking to excel by training in a more intense and dynamic
                 environment & competing in highly competitive tournaments.
@@ -47,7 +47,7 @@ const Index = () => (
           </div>
           <div className="flex-1 px-3">
             <Card className="bg-white">
-              <p className={"text-xl"}>
+              <p className="lg:text-xl">
                 It is a team oriented philosophy with a goal to compete against
                 top teams and divisions around the Midwest as well as national
                 tournaments against top ranked teams.
@@ -122,8 +122,8 @@ const Index = () => (
         </div>
       </div>
     </section>
-    <section id="tryouts" className="py-5 lg:py-10">
-      <div className="container mx-auto pt-32 pb-32">
+    <section id="tryouts" className="py-32">
+      <div className="container mx-auto">
         <div className="flex flex-col md:flex-row md:-mx-3">
           <Card className="mb-8 bg-primary">
             <LabelText className="mb-8 text-white text-center text-3xl">Tryouts</LabelText>
