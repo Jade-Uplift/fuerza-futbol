@@ -5,7 +5,6 @@ import LabelText from '../components/LabelText';
 import Layout from '../components/layout/Layout';
 import SplitSection from '../components/SplitSection';
 import CompetitionBox from '../components/CompetitionBox';
-import FrontPageImage from '../assets/IMG_6277.jpeg';
 import AboutImage from '../assets/IMG_0834.jpg';
 import TrainingImage from '../assets/IMG_0827.jpeg';
 import LearningImage from '../assets/DF9946C5-98CD-439A-9F06-6738E77EB93F.jpg';
@@ -13,50 +12,19 @@ import TrainingMoreImage from '../assets/IMG_5016.jpeg';
 
 const Index = () => (
   <Layout>
-    <section className="pt-20 md:pt-40">
-      <div className="container mx-auto px-8 lg:flex mb-20">
-        <div className="text-center lg:text-left lg:w-1/2">
+    <section className="pt-40 md:pt-64 bg-main-div-image">
+      <div>
+        <div className="py-40">
+        </div>
+        <div className="text-center lg:text-left bg-white bg-opacity-50 p-10 mb-0">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
             Fuerza Futbol
           </h1>
-          <p className="mt-8 md:mt-12">
-            <Button size="lg">Learn More</Button>
-          </p>
-          <p className="mt-4 text-gray-600">This would be a really good place for a tagline of some sort.</p>
-        </div>
-        <div className="lg:w-1/2">
-          <img src={FrontPageImage} alt="team" />
+          <p className="mt-4">This would be a really good place for a tagline of some sort.</p>
         </div>
       </div>
     </section>
-    <section id="about" className="py-40 bg-primary bg-opacity-25">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">About Us</h2>
-        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12 items-center">
-          <div className="flex-1 px-3">
-            <Card className="bg-white">
-              <p className="lg:text-xl">
-                Fúerza CF is an elite soccer team in the Des Moines area for ‘09
-                girls seeking to excel by training in a more intense and dynamic
-                environment & competing in highly competitive tournaments.
-              </p>
-            </Card>
-          </div>
-          <div className="flex-1 px-3">
-              <img src={AboutImage} alt="team" />
-          </div>
-          <div className="flex-1 px-3">
-            <Card className="bg-white">
-              <p className="lg:text-xl">
-                It is a team oriented philosophy with a goal to compete against
-                top teams and divisions around the Midwest as well as national
-                tournaments against top ranked teams.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <div className="">
     <SplitSection
       id="training"
@@ -103,7 +71,7 @@ const Index = () => (
       secondarySlot={<img src={LearningImage} alt="team" />}
     />
     </div>
-    <section id="competition" className="py-20 lg:pt-32">
+    <section id="competition" className="pt-20 lg:pt-32">
       <div className="container mx-auto text-center">
         <LabelText className="text-gray-600">Competition</LabelText>
         <div className="flex flex-col items-center lg:flex-row mt-8 lg:px-24 lg:items-start">
@@ -120,6 +88,35 @@ const Index = () => (
             <CompetitionBox primaryText="Winter" secondaryText="The team plays all year in competitive tournaments that are full field (11v11)" />
           </div>
         </div>
+      </div>
+    </section>
+    <section id="about" className="text-center pt-40">
+      <h3 className="text-5xl font-semibold pb-10">Who We Are</h3>
+      <div className="py-64 bg-primary bg-opacity-25 bg-about-div-image">
+        <div className="container mx-auto text-center">
+        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12 items-center">
+          <div className="flex-1 px-3">
+            <Card className="bg-white bg-opacity-75">
+              <p className="lg:text-xl">
+                Fúerza CF is an elite soccer team in the Des Moines area for ‘09
+                girls seeking to excel by training in a more intense and dynamic
+                environment & competing in highly competitive tournaments.
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="bg-white bg-opacity-75">
+              <p className="lg:text-xl">
+                It is a team oriented philosophy with a goal to compete against
+                top teams and divisions around the Midwest as well as national
+                tournaments against top ranked teams.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
     <section id="tryouts" className="py-40">

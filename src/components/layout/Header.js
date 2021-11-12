@@ -13,14 +13,15 @@ const Header = () => (
         Fuerza Futbol
       </div>
       <div className="flex mt-4 sm:mt-0">
-        <AnchorLink className="px-4" href="#about">
-          About
-        </AnchorLink>
+
         <AnchorLink className="px-4" href="#training">
           Training
         </AnchorLink>
         <AnchorLink className="px-4" href="#competition">
           Competition
+        </AnchorLink>
+        <AnchorLink className="px-4" href="#about">
+          Who We Are
         </AnchorLink>
         <AnchorLink className="px-4" href="#tryouts">
           Tryouts

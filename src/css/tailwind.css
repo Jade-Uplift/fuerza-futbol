@@ -7,6 +7,22 @@ a:hover {
   @apply text-primary-darker;
 }
 
+.bg-main-div-image {
+  background-image: url('../assets/IMG_6277.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bg-about-div-image {
+  background-image: url('../assets/IMG_0834.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 @tailwind components;
 
 @tailwind utilities;
