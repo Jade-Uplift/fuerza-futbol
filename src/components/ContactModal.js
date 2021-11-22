@@ -27,6 +27,11 @@ const ContactModal = props => {
           data-netlify="true">
 
           <input
+            name="form-name"
+            value="contact"
+            type="hidden" />
+
+          <input
             type='text'
             name='name'
             placeholder='Enter your name' />
@@ -40,7 +45,7 @@ const ContactModal = props => {
             name='message'
             placeholder='Message' />
 
-          <Button action={() => setVisible(false)} type='submit'>Submit</Button>
+          <Button type='submit'>Submit</Button>
 
         </form>
         <form name='contactForm' netlify hidden>
