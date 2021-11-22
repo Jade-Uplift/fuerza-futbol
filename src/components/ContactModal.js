@@ -6,16 +6,16 @@ import {
   Form,
   Field,
   ErrorMessage
-} from 'formik'
+} from 'formik';
 
 const ContactModal = (props) => {
   const [visible, setVisible] = useState(false);
 
   const encode = (data) => {
     return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  }
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  };
 
   return (
     <div>
@@ -33,56 +33,53 @@ const ContactModal = (props) => {
           initialValues={{
             name: '',
             email: '',
-            message: '',
+            message: ''
           }}
           onSubmit={(values, actions) => {
-            fetch("/", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: encode({ "form-name": "contact-demo", ...values })
+            fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: encode({ 'form-name': 'contact-form', ...values })
             })
               .then(() => {
                 alert('Success');
-                actions.resetForm()
+                actions.resetForm();
               })
               .catch(() => {
                 alert('Error');
               })
-              .finally(() =>  {
+              .finally(() => {
                 actions.setSubmitting(false);
-                setVisible(false)
-              })
+                setVisible(false);
+              });
           }}
           validate={values => {
             const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
             const errors = {};
-            if(!values.name) {
-              errors.name = 'Name Required'
+            if (!values.name) {
+              errors.name = 'Name Required';
             }
-            if(!values.email || !emailRegex.test(values.email)) {
-              errors.email = 'Valid Email Required'
+            if (!values.email || !emailRegex.test(values.email)) {
+              errors.email = 'Valid Email Required';
             }
-            if(!values.message) {
-              errors.message = 'Message Required'
+            if (!values.message) {
+              errors.message = 'Message Required';
             }
             return errors;
           }}
         >
-          {() => (
-            <Form name="contact-demo" data-netlify={true}>
-              <label htmlFor="name">Name: </label>
-              <Field name="name" />
-              <ErrorMessage name="name" />
+          {({ errors, touched }) => (
+            <Form name='contact-form' data-netlify={true}>
+              <label className='hidden' htmlFor='name'> </label>
+              <Field placeholder='Enter Name' name='name' className={touched.name && errors.name ? 'error-field' : ''} />
 
-              <label htmlFor="email">Email: </label>
-              <Field name="email" />
-              <ErrorMessage name="email" />
+              <label className='hidden' htmlFor='email'> </label>
+              <Field placeholder='Enter Email' name='email' className={touched.email && errors.email ? 'error-field' : ''} />
 
-              <label htmlFor="message">Message: </label>
-              <Field name="message" component="textarea"/>
-              <ErrorMessage name="message" />
+              <label className='hidden' htmlFor='message'><ErrorMessage name={'message'} /></label>
+              <Field placeholder='Enter Message' name='message' component='textarea' className={touched.message && errors.message ? 'error-field' : ''} />
 
-              <button type="submit">Send</button>
+              <Button type='submit'>Send</Button>
             </Form>
           )}
         </Formik>

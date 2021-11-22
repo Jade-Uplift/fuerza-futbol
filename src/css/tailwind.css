@@ -49,7 +49,7 @@ textarea {
   resize: none;
 }
 
-.contact-form{
+form{
   padding: 10px;
   width: 90%;
   max-width: 400px;
@@ -59,20 +59,28 @@ textarea {
   flex-direction: column;
   gap: 20px;
 }
-.contact-form input, button, textarea{
+form input, textarea{
   height: 50px;
   padding-left: 5px;
   font-size: 18px;
   color: rgb(64, 153, 224);
 }
 
-.contact-form input::placeholder, button::placeholder, textarea::placeholder{
+form input::placeholder, textarea::placeholder{
   color: rgba(64, 153, 224, .5);
 }
-.contact-form textarea{
+
+form textarea{
   height: 100px;
 }
 
+.error-field {
+  border: 1px solid red;
+}
+
+.error-field::placeholder{
+  color: red;
+}
 
 @tailwind components;
 

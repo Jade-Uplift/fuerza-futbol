@@ -15,7 +15,7 @@ const Competition = () => {
             <CompetitionBox primaryText='SCNL' secondaryText='Select Clubs National Showcase League' />
           </div>
           <div className='w-full sm:w-1/4 mx-5'>
-            <CompetitionBox primaryText='Tournaments' secondaryText='Top Flight/Gold Bracket Only' />
+            <CompetitionBox primaryText='TOURN' secondaryText='Top Flight/Gold Bracket Only' />
           </div>
           <div className='w-full sm:w-1/4 mx-5'>
             <CompetitionBox primaryText='Winter'
