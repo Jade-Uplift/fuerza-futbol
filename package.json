@@ -12,6 +12,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "formik": "^2.2.9",
     "gatsby": "^4.0.0",
     "gatsby-plugin-emotion": "^7.0.0",
     "gatsby-theme-codebushi": "^1.0.0",

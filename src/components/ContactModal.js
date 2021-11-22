@@ -1,58 +1,21 @@
+import React, { useState } from 'react';
 import Button from './Button';
 import Rodal from 'rodal';
+import {
+  Formik,
+  Form,
+  Field,
+  ErrorMessage
+} from 'formik'
 
-const ContactModal = props => {
+const ContactModal = () => {
   const [visible, setVisible] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [submitterName, setSubmitterName] = useState("");
-  let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
 
-  const form = (
-    <form
-      method='POST'
-      name='contact-form'
-      className='contact-form'
-      data-netlify='true'>
-
-      <input
-        name='form-name'
-        value='contact-form'
-        type='hidden' />
-
-      <input
-        type="hidden"
-        name="subject"
-        value={`You've got mail from ${submitterName}`} />
-
-      <input
-        type='text'
-        name='name'
-        required={true}
-        onChange={(e) => setSubmitterName(e.target.value)}
-        placeholder='Enter your name' />
-
-      <input
-        type='email'
-        name='email'
-        required={true}
-        placeholder='Enter your email' />
-
-      <textarea
-        name='message'
-        required={true}
-        placeholder='Message' />
-
-      <Button type='submit'>Submit</Button>
-
-    </form>
-  );
-
-  const submittedSuccess = (
-    <div className={"flex items-center flex-col"}>
-      <p className={"text-lg text-primary pt-32 pb-8"}>Submission Successful</p>
-      <Button action={() => setVisible(false) & setSubmitted(false)}>Close Window</Button>
-    </div>
-  );
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
 
   return (
     <div>
@@ -65,15 +28,64 @@ const ContactModal = props => {
         visible={visible}
         onClose={() => setVisible(false) & setSubmitted(false)}
         dis
-        height={425}
-        width={pathname.innerWidth < 500 ? pathname.innerWidth - 5 : 400}
-      >
-        {submitted ? submittedSuccess : form}
+        height={425}>
+        <Formik
+          initialValues={{
+            name: '',
+            email: '',
+            message: '',
+          }}
+          onSubmit={(values, actions) => {
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: encode({ "form-name": "contact-demo", ...values })
+            })
+              .then(() => {
+                alert('Success');
+                actions.resetForm()
+              })
+              .catch(() => {
+                alert('Error');
+              })
+              .finally(() => actions.setSubmitting(false))
+          }}
+          validate={values => {
+            const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+            const errors = {};
+            if(!values.name) {
+              errors.name = 'Name Required'
+            }
+            if(!values.email || !emailRegex.test(values.email)) {
+              errors.email = 'Valid Email Required'
+            }
+            if(!values.message) {
+              errors.message = 'Message Required'
+            }
+            return errors;
+          }}
+        >
+          {() => (
+            <Form name="contact-demo" data-netlify={true}>
+              <label htmlFor="name">Name: </label>
+              <Field name="name" />
+              <ErrorMessage name="name" />
+
+              <label htmlFor="email">Email: </label>
+              <Field name="email" />
+              <ErrorMessage name="email" />
+
+              <label htmlFor="message">Message: </label>
+              <Field name="message" component="textarea"/>
+              <ErrorMessage name="message" />
+
+              <button type="submit">Send</button>
+            </Form>
+          )}
+        </Formik>
       </Rodal>
     </div>
   );
 };
-
-import React, { useState } from 'react';
 
 export default ContactModal;
