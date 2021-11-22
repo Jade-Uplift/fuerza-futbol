@@ -8,7 +8,7 @@ import {
   ErrorMessage
 } from 'formik'
 
-const ContactModal = () => {
+const ContactModal = (props) => {
   const [visible, setVisible] = useState(false);
 
   const encode = (data) => {
@@ -26,7 +26,7 @@ const ContactModal = () => {
         leaveAnimation='zoom'
         closeOnEsc
         visible={visible}
-        onClose={() => setVisible(false) & setSubmitted(false)}
+        onClose={() => setVisible(false)}
         dis
         height={425}>
         <Formik
@@ -48,7 +48,10 @@ const ContactModal = () => {
               .catch(() => {
                 alert('Error');
               })
-              .finally(() => actions.setSubmitting(false))
+              .finally(() =>  {
+                actions.setSubmitting(false);
+                setVisible(false)
+              })
           }}
           validate={values => {
             const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
