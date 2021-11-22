@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 const ContactModal = props => {
   const [visible, setVisible] = useState(false);
+  let pathname = typeof window !== "undefined" ? window.location.pathname : ""
 
   return (
     <div>
@@ -17,7 +18,7 @@ const ContactModal = props => {
         onClose={() => setVisible(false)}
         dis
         height={425}
-        width={window.innerWidth < 500 ? window.innerWidth - 5 : 400}
+        width={pathname.innerWidth < 500 ? pathname.innerWidth - 5 : 400}
       >
         <form
           method='POST'
