@@ -6,10 +6,11 @@ const sizes = {
   xl: `py-5 px-16 text-lg`
 };
 
-const Button = ({ children, className = '', size }) => {
+const Button = ({ children, className = '', size, action }) => {
   return (
     <button
       type="button"
+      onClick={action}
       className={`
         ${sizes[size] || sizes.default}
         ${className}

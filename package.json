@@ -19,7 +19,8 @@
     "react": "^17.0.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "rodal": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^7.21.0",

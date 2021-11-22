@@ -8,7 +8,7 @@ a:hover {
 }
 
 .bg-main-div-image {
-  background-image: url('../assets/IMG_6277.jpeg');
+  background-image: url('../assets/IMG_1022.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,12 +16,63 @@ a:hover {
 }
 
 .bg-about-div-image {
-  background-image: url('../assets/IMG_0834.jpg');
+  background-image: url('../assets/IMG_1034.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+
+#hamburger {
+  display: none;
+}
+
+#open {
+  display: block;
+}
+
+#not-open {
+  display: none;
+}
+
+@media only screen and (max-width: 631px) {
+  #hamburger {
+    display: block;
+  }
+
+  #full-menu {
+    display: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.contactForm{
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  margin: 30px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contactForm input, button, textarea{
+  height: 50px;
+  padding-left: 5px;
+  font-size: 18px;
+  color: rgb(64, 153, 224);
+}
+
+.contactForm input::placeholder, button::placeholder, textarea::placeholder{
+  color: rgba(64, 153, 224, .5);
+}
+.contactForm textarea{
+  height: 100px;
+}
+
 
 @tailwind components;
 
