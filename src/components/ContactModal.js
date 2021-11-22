@@ -12,7 +12,6 @@ const ContactModal = props => {
       method='POST'
       name='contact-form'
       className='contact-form'
-      action={() => setSubmitted(true)}
       data-netlify='true'>
 
       <input
