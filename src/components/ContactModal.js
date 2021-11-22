@@ -23,12 +23,8 @@ const ContactModal = props => {
         <form
           method='POST'
           name='contactform'
-          className='contactForm'>
-
-          <input
-            type='hidden'
-            name='form-name'
-            value='contactForm' />
+          className='contactForm'
+          data-netlify="true">
 
           <input
             type='text'
