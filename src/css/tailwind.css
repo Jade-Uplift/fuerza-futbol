@@ -67,7 +67,7 @@ textarea {
   color: rgb(64, 153, 224);
 }
 
-#form-field::placeholder #form-textarea::placeholder {
+#form-field::placeholder, #form-textarea::placeholder {
   color: rgba(64, 153, 224, .5);
 }
 
