@@ -14,7 +14,7 @@ function Header() {
           <div className='w-12 mr-3'>
             <img src={LogoIcon} alt='logo' />
           </div>
-          Fuerza Fútbol
+          Fúerza Fútbol
           <div onClick={() => setOpen(!open)} id="hamburger" className='px-4'>
             {open ? <FiX className='text-primary' /> : <FiMenu className='text-primary' />}
           </div>

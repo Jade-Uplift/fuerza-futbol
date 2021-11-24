@@ -18,7 +18,7 @@ const Index = () => {
           </div>
           <div className='text-center lg:text-left bg-white bg-opacity-50 p-10 mb-0'>
             <h1 className='text-4xl lg:text-5xl xl:text-6xl font-bold leading-none'>
-              Fuerza Fútbol
+              Fúerza Fútbol
             </h1>
             <p className='mt-4'>Elite Training, Elite Competition, and Elite Players</p>
           </div>

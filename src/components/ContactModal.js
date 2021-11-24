@@ -6,7 +6,6 @@ import {
   Form,
   Field
 } from 'formik';
-import { useAlert } from 'react-alert';
 
 function encode(data) {
   return Object.keys(data)

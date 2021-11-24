@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Helmet
-        title={'Elite Des Moines Soccer Program – Fuerza Fútbol'}
+        title={'Elite Des Moines Soccer Program – Fúerza Fútbol'}
         meta={[
           {
             name: 'description',
