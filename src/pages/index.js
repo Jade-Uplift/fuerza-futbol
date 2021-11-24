@@ -12,8 +12,8 @@ const Index = () => {
 
   return (
     <Layout>
-      <section id='top' className='pt-40 md:pt-64 bg-main-div-image'>
-        <div>
+      <section id='top'>
+        <div className={'bg-main-div-image'}>
           <div className='py-40'>
           </div>
           <div className='text-center lg:text-left bg-white bg-opacity-50 p-10 mb-0'>

@@ -23,6 +23,12 @@ a:hover {
   background-attachment: fixed;
 }
 
+@media only screen and (max-device-width : 1024px) {
+  .bg-main-div-image , .bg-about-div-image {
+    background-attachment: scroll;
+  }
+}
+
 #hamburger {
   display: none;
 }
