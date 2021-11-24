@@ -43,7 +43,7 @@ const Training = () => {
               Trace
             </h3>
             <p className='mt-8 text-xl font-light leading-relaxed'>
-              <a href={''}>Trace</a> is utilized with each player for all games
+              <a href={'https://traceup.com'}>Trace</a> is utilized with each player for all games
               to review game film in a team and individual setting as a comprehension
               tool to visually understand areas of focus and reinforcement.
             </p>
