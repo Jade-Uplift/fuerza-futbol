@@ -4,8 +4,7 @@ import Rodal from 'rodal';
 import {
   Formik,
   Form,
-  Field,
-  ErrorMessage
+  Field
 } from 'formik';
 
 const ContactModal = (props) => {
@@ -13,9 +12,9 @@ const ContactModal = (props) => {
 
   const encode = (data) => {
     return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-  };
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
 
   return (
     <div>
@@ -56,6 +55,7 @@ const ContactModal = (props) => {
             }
           }
         >
+          {() => (
             <Form id='form' name='contact' data-netlify={true}>
               <label className='hidden' htmlFor='name'>Name: </label>
               <Field id='form-field' placeholder='Enter Name' name='name' />
@@ -68,6 +68,7 @@ const ContactModal = (props) => {
 
               <Button type='submit'>Send</Button>
             </Form>
+          )}
         </Formik>
       </Rodal>
     </div>
