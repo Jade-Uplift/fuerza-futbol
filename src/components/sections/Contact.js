@@ -12,11 +12,9 @@ const Contact = () => {
           Yellow card center-half defender UEFA European Championship World Cup hat trick halftime soccer red card
           three-five-two forward.
         </p>
-        <p className='mt-8'>
-          <div>
-            <ContactModal buttonText={"Contact Us to Get Started"} buttonClass={"text-xl"} />
-          </div>
-        </p>
+        <div className='mt-8'>
+          <ContactModal buttonText={'Contact Us to Get Started'} buttonClass={'text-xl'} />
+        </div>
       </div>
     </section>
   );
