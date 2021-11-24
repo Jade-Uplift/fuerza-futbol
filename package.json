@@ -19,11 +19,11 @@
     "gatsby-theme-codebushi": "^1.0.0",
     "helmet": "^4.6.0",
     "postcss": "^8.3.8",
-    "react": "^16.12.0",
+    "react": "^16.4.2",
     "react-alert": "^7.0.3",
     "react-alert-template-basic": "^1.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-dom": "^17.0.1",
+    "react-dom": "^16.4.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "rodal": "^1.8.1"
