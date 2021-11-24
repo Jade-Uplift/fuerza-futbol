@@ -35,27 +35,28 @@ const ContactModal = (props) => {
             email: '',
             message: ''
           }}
-          onSubmit={(values, actions) => {
-            fetch('/', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: encode({ 'form-name': 'contact-form', ...values })
-            })
-              .then(() => {
-                alert('Success');
-                actions.resetForm();
+          onSubmit={
+            (values, actions) => {
+              fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "contact", ...values })
               })
-              .catch(() => {
-                alert('Error');
-              })
-              .finally(() => {
-                actions.setSubmitting(false);
-                setVisible(false);
-              });
-          }}
+                .then(() => {
+                  alert('Success');
+                  actions.resetForm()
+                })
+                .catch(() => {
+                  alert('Error');
+                })
+                .finally(() => {
+                  actions.setSubmitting(false);
+                  setVisible(false);
+                })
+            }
+          }
         >
-          {({ errors, touched }) => (
-            <Form id='form' name='contact-form' data-netlify={true}>
+            <Form id='form' name='contact' data-netlify={true}>
               <label className='hidden' htmlFor='name'>Name: </label>
               <Field id='form-field' placeholder='Enter Name' name='name' />
 
@@ -67,7 +68,6 @@ const ContactModal = (props) => {
 
               <Button type='submit'>Send</Button>
             </Form>
-          )}
         </Formik>
       </Rodal>
     </div>
