@@ -49,7 +49,7 @@ textarea {
   resize: none;
 }
 
-form{
+#form {
   padding: 10px;
   width: 90%;
   max-width: 400px;
@@ -59,19 +59,23 @@ form{
   flex-direction: column;
   gap: 20px;
 }
-form input, textarea{
+
+#form-field {
   height: 50px;
   padding-left: 5px;
   font-size: 18px;
   color: rgb(64, 153, 224);
 }
 
-form input::placeholder, textarea::placeholder{
+#form-field::placeholder #form-textarea::placeholder {
   color: rgba(64, 153, 224, .5);
 }
 
-form textarea{
+#form-textarea {
   height: 100px;
+  padding-left: 5px;
+  font-size: 18px;
+  color: rgb(64, 153, 224);
 }
 
 .error-field {

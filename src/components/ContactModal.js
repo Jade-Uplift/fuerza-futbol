@@ -69,15 +69,15 @@ const ContactModal = (props) => {
           }}
         >
           {({ errors, touched }) => (
-            <Form name='contact-form' data-netlify={true}>
+            <Form id='form' name='contact-form' data-netlify={true}>
               <label className='hidden' htmlFor='name'> </label>
-              <Field placeholder='Enter Name' name='name' className={touched.name && errors.name ? 'error-field' : ''} />
+              <Field id='form-field' placeholder='Enter Name' name='name' className={touched.name && errors.name ? 'error-field' : ''} />
 
               <label className='hidden' htmlFor='email'> </label>
-              <Field placeholder='Enter Email' name='email' className={touched.email && errors.email ? 'error-field' : ''} />
+              <Field id='form-field' placeholder='Enter Email' name='email' className={touched.email && errors.email ? 'error-field' : ''} />
 
               <label className='hidden' htmlFor='message'><ErrorMessage name={'message'} /></label>
-              <Field placeholder='Enter Message' name='message' component='textarea' className={touched.message && errors.message ? 'error-field' : ''} />
+              <Field id='form-textarea' placeholder='Enter Message' name='message' component='textarea' className={touched.message && errors.message ? 'error-field' : ''} />
 
               <Button type='submit'>Send</Button>
             </Form>
