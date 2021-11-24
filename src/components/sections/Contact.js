@@ -9,7 +9,7 @@ const Contact = () => {
       <div className='container mx-auto my-15 py-20 rounded-lg text-center'>
         <h3 className='text-5xl font-semibold'>Ready to get involved?</h3>
         <p className='mt-8 text-xl font-light'>
-          Click below if interested in training and competing at a higher level
+          Click below if interested in training and competing at a higher level!
         </p>
         <div className='mt-8'>
           <ContactModal buttonText={'Contact Us to Get Started'} buttonClass={'text-xl'} />
